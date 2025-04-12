@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "parts/header.php";
 ?>
 <body>
@@ -18,7 +19,6 @@ include_once "parts/nav.php";
           </div>
         </div>
       </section>
-
     </main>
 <?php include_once "parts/footer.php";
 ?>

@@ -2,6 +2,8 @@
 include "classes/Menu.php";
 $menuManager = new Menu();
 $theme = isset($_GET["theme"]) ? $_GET["theme"] : "light";
+session_start();
+$_SESSION['theme'] = $theme;
 ?>
 <header style="background-color: <?php echo $theme === "dark" ? "grey" : "white"; ?>"
         class="container main-header">
@@ -21,7 +23,8 @@ $theme = isset($_GET["theme"]) ? $_GET["theme"] : "light";
                 $menuManager->printMenu($menuData);
             } else {
                 echo "Neplatný typ menu";
-            }
+            };
+            echo $menuManager->printLoginRegister()
             ?>
         </ul>
         <a class="hamburger" id="hamburger">

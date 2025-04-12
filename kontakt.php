@@ -1,11 +1,11 @@
 <?php
+session_start();
 include_once "parts/header.php";
 ?>
 <body>
 <?php
 include_once "parts/nav.php";
 ?>
-<main>
   <main>
     <section class="banner">
       <div class="container text-white">
@@ -20,27 +20,24 @@ include_once "parts/nav.php";
         </div>
       </div>
     </section>
-    <section class="container">
-      <div class="row">
-        <div class="col-50"> 
-          <h3>Máte otázky?</h3>
-          <p>Incididunt mollit quis eiusmod tempor voluptate duis eu enim amet excepteur cupidatat magna velit. </p> 
-          <p>Velit id ad laborum velit commodo.</p>
-          <p>Consectetur laborum aliqua nulla anim cupidatat consectetur est veniam cupidatat.</p>
-        </div>
-        <div class="col-50 text-right">
-          <h3>Napíšte nám</h3>
-            <form id="contact" method="post" action="db/spracovanieFormulara.php">
-                <input type="text" placeholder="Vaše meno" name="meno" id ="meno"  required><br>
-                <input type="email" placeholder="Váš email" name="email" id="email" required><br>
-                <textarea placeholder="Vaša správa" name="sprava" id="sprava"></textarea><br>
-                <input type="checkbox" name="" id="" required>
-                <label for=""> Súhlasím so spracovaním osobných údajov.</label><br>
-                <input type="submit" value="Odoslať">
-            </form>
-        </div>
-      </div>
-    </section>
+      <section class="container">
+          <div class="row">
+              <div class="col-50">
+                  <h3>Máte otázky?</h3>
+              </div>
+              <div class="col-50 text-right">
+                  <h3>Napíšte nám</h3>
+                  <form id="contact" method="post" action="db/spracovanieFormulara.php">
+                      <input type="text" placeholder="Vaše meno" name="meno" id ="meno"  required><br>
+                      <input type="email" placeholder="Váš email" name="email" id="email" required><br>
+                      <textarea placeholder="Vaša správa" name="sprava" id="sprava"></textarea><br>
+                      <input type="checkbox" name="" id="" required>
+                      <label for=""> Súhlasím so spracovaním osobných údajov.</label><br>
+                      <input type="submit" value="Odoslať">
+                  </form>
+              </div>
+          </div>
+      </section>
   </main>
 <?php
 include_once "parts/footer.php";

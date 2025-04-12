@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "parts/header.php";
 ?>
 <body>
@@ -23,7 +24,8 @@ include_once "parts/nav.php";
            use otazkyodpovede\QnA;
 
           $qna = new QnA();
-          $qna->insertQnA();
+          //$qna->insertQnA();
+          $qna->getQnA();
           ?>
   </main>
   <?php
