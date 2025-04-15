@@ -22,7 +22,7 @@ class Users extends Database{
             $statement->execute();
             $existingUser = $statement->fetch();
             if ($existingUser) {
-                throw new Exception("Požívateľ už existuje.");
+                throw new Exception("Používateľ už existuje.");
             }
             $sql = "INSERT INTO pouzivatelia (login, email, heslo, rola) VALUES (?, ?, ?, ?)";
             $statement = $this->connection->prepare($sql);
@@ -45,7 +45,7 @@ class Users extends Database{
         $statement->execute();
         $user = $statement->fetch();
         if (!$user) {
-            throw new Exception("Požívateľ s daným menom neexistuje.");
+            throw new Exception("Používateľ s daným menom neexistuje.");
         }
         //Parameter heslo je názov stĺpca v db
         $storedPassword = $user['heslo'];
