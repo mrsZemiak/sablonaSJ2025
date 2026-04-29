@@ -1,4 +1,4 @@
-## 📌 Šablóna SJ 2025 – PHP Cvičenia
+## 📌 Šablóna SJ 2025 – PHP Cvičenia - STÁLE AKTUÁLNE AJ PRE ROK 2026
 
 Tento projekt slúži ako podklad pre cvičenia z predmetu Skriptovacie jazyky, kde sa študenti postupne učia nové funkcionality vrámci jazyka PHP.
 
